@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class WeatherService {
-myApiKey = '15cd3d0b72774d169b6140618243006';
+myApiKey = 'api-key'; // generate api key from www.weatherapi.com
   constructor(private http: HttpClient) { }
 
   getWeatherData(location: string) {
