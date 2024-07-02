@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h3 class="text-center">Search For Weather</h3>
+            <form [formGroup]="weatherForm">
+                <div class="input-group">
+                    <input type="text" class="form-control" formControlName="location"
+                    placeholder="enter city Name" />
+                </div>
+                <div class="text-center mt-3">
+                    <button type="button" class="btn btn-success" (click)="onSubmit()">Search</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <h3 class="text-center">Weather Details</h3>
+            <div class="text-center">
+                Current weather condition <span>
+                    <img [src]="weatherData.current.condition.icon" />
+                    {{weatherData.current.condition.text}}
+                </span>
+            </div>
+            <p class="text-center"> Current City Temperature: {{weatherData.current.temp_c}}</p>
+            <p class="text-center">Current City Name: {{weatherData.location.name}}</p>
+        </div>
+    </div>
+</div>
